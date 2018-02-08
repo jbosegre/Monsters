@@ -13,7 +13,7 @@ class Monster
 
     function __construct($name = "unknown")
     {
-        $this-->$name = $name;
+        $this->name = $name;
     }
 
     function getName()
