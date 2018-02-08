@@ -4,6 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 
 include('Monster.php');
+include('Vampire.php');
+include('Troll.php');
 ?>
 
 <!doctype html>
@@ -27,6 +29,20 @@ echo "<h5>Setting monster name to Goblin</h5>";
 $monster->setName("Goblin");
 echo "<h5>Monster's name is: " . $monster->getName() . "</h5>";
 $monster->attack();
+
+$vampire = new Vampire("Pete");
+echo "<h5>Vampire's name is: " . $vampire->getName() . "</h5>";
+echo "<h5>Vampire's victim is: " . $vampire->getVictim() . "</h5>";
+$vampire->attack();
+echo "<h5>Vampire's victim is: " . $vampire->getVictim() . "</h5>";
+
+$troll = new Troll("Howard", 10);
+echo "<h5>Troll's name is: " . $troll->getName() . "</h5>";
+echo "<h5>troll eats.</h5>";
+$troll->eat();
+$troll->attack();
+
+
 
 
 ?>
