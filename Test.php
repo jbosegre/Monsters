@@ -4,10 +4,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
 
 include('Monster.php');
-echo "creating monster";
+?>
 
-$monster = new Monster("Troll");
-$monster.setName("Goblin");
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,9 +13,22 @@ $monster.setName("Goblin");
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Monsters</title>
 </head>
 <body>
+<?php
 
+
+echo "<h5>creating monster</h5>";
+
+$monster = new Monster("Troll");
+echo "<h5>Monster's name is: $monster.getName()</h5>";
+echo "<h5>Setting monster name to Goblin</h5>";
+$monster.setName("Goblin");
+echo "<h5>Monster's name is: $monster.getName()</h5>";
+$monster.attack();
+
+
+?>
 </body>
 </html>
