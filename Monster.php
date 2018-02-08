@@ -16,7 +16,7 @@ class Monster
         $this-->$name = $name;
     }
 
-    function getname()
+    function getName()
     {
         return $this->name;
     }
