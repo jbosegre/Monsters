@@ -22,11 +22,11 @@ include('Monster.php');
 echo "<h5>creating monster</h5>";
 
 $monster = new Monster("Troll");
-echo "<h5>Monster's name is: $monster.getName()</h5>";
+echo "<h5>Monster's name is: " . $monster->getName() . "</h5>";
 echo "<h5>Setting monster name to Goblin</h5>";
-$monster.setName("Goblin");
-echo "<h5>Monster's name is: $monster.getName()</h5>";
-$monster.attack();
+$monster->setName("Goblin");
+echo "<h5>Monster's name is: " . $monster->getName() . "</h5>";
+$monster->attack();
 
 
 ?>
